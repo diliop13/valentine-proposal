@@ -10,6 +10,7 @@
     <div style="display: flex; gap: 10px; align-items: center;">
         <input type="button" id="yesBtn" value="Yes" />
         <input type="button" id="noBtn" value="No" />
+        <span id="error">Τι λεςςςςς πατα ναιιιι</span>
     </div>
     
 
@@ -28,6 +29,8 @@
     const text = document.getElementById('text');
     const gif = document.getElementById('gif1');
     const gif2 = document.getElementById('gif2');
+    const error = document.getElementById('error');
+    error.style.visibility="hidden";
     let fontSize = 16;
     let fontSize2=16;
     yesBtn.style.fontSize = fontSize;
@@ -39,6 +42,7 @@
             fontSize2 -= 2;
             noBtn.style.fontSize=fontSize2 + "px";
             yesBtn.style.fontSize=fontSize + "px";
+            error.style.visibility="visible";
 
         });
         yesBtn.addEventListener('click', function() {
@@ -60,6 +64,11 @@
         flex-direction: column; /* Τα βάζει το ένα κάτω από το άλλο */
         justify-content: center; /* Κεντράρει κάθετα */
         align-items: center;
+    }
+    #error {
+        color: red;
+        font-weight: bold;
+        margin-left: 10px;
     }
     h1 {
         font-size: 2em;
