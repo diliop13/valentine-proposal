@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal</title>
+</head>
+<body>
+    <h1 id="text">Will you be my Valentine?</h1>
+    <div style="display: flex; gap: 10px; align-items: center;">
+        <input type="button" id="yesBtn" value="Yes" />
+        <input type="button" id="noBtn" value="No" />
+    </div>
+    
+
+<div class="tenor-gif-embed" data-postid="14094692718516872488" data-share-method="host" data-aspect-ratio="1" data-width="100%">
+    <a href="https://tenor.com/view/bearish-bearishaf-bearish-af-bear-teddy-gif-14094692718516872488">Bearish Bearishaf GIF</a>from <a href="https://tenor.com/search/bearish-gifs">Bearish GIFs</a></div> 
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>    
+
+<div class="tenor-gif-embed" data-postid="22536058" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/bear-kiss-bear-kisses-kiss-kisses-love-gif-22536058">Bear Kiss Bear Kisses Sticker</a>from <a href="https://tenor.com/search/bear+kiss-stickers">Bear Kiss Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+</body>
+</html>
+<script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn'); 
+    const text = document.getElementById('text');
+    const gif = document.getElementsByClassName('tenor-gif-embed');
+    const gif2 = document.getElementsByClassName('tenor-gif-embed2');
+    let fontSize = 16;
+    let fontSize2=16;
+    yesBtn.style.fontSize = fontSize;
+    noBtn.style.fontSize = fontSize;    
+    
+    noBtn.addEventListener('click',function(){
+            fontSize += 30;
+            fontSize2 -= 2;
+            noBtn.style.fontSize=fontSize2 + "px";
+            yesBtn.style.fontSize=fontSize + "px";
+
+        });
+        yesBtn.addEventListener('click', function() {
+            noBtn.style.display = "none";
+            yesBtn.style.display = "none";  
+            text.innerText ="LOVE YOUUUUU <3";
+            gif[0].style.display="none";
+            gif2[0].style.display="visible";
+
+        });
+
+</script>
+<style>
+    body {
+        text-align: center;
+        margin-top: 10%;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column; /* Τα βάζει το ένα κάτω από το άλλο */
+        justify-content: center; /* Κεντράρει κάθετα */
+        align-items: center;
+    }
+    h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        
+    }
+    #yesBtn, #noBtn {
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+    }
+    input[type="button"] {
+        padding: 10px 20px;
+        margin: 10px;
+        cursor: pointer;
+    }
+</style>
